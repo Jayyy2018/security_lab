@@ -16,7 +16,7 @@ var favicon = require("serve-favicon");
 var bodyParser = require("body-parser");
 var session = require("express-session");
 // fix 2
-var validate = require('validator');
+var validate = require('express-validator');
 var consolidate = require("consolidate"); // Templating library adapter for Express
 var swig = require("swig");
 var http = require("http");
