@@ -14,8 +14,6 @@
 /********************************************************************************/
 
 var db = require("./database.js");
-// var validate = require('express-validator');
-
 
 
 /********************************************************************************/
@@ -63,7 +61,7 @@ function displayContributions1(req,res,next,sts,err,data)
 function handleContributionsUpdate(req,res,next)
 {
    // convert to numbers
-   // fix 2, change eval() to validato.toFloat()
+   // fix 2, change eval() to parseFloat()
    var preTax = parseFloat(req.body.preTax);
    var afterTax = parseFloat(req.body.afterTax);
    var roth = parseFloat(req.body.roth);
