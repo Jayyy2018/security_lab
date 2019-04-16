@@ -14,7 +14,7 @@
 /********************************************************************************/
 
 var db = require("./database.js");
-var validate = require('express-validator');
+// var validate = require('express-validator');
 
 
 
@@ -64,9 +64,9 @@ function handleContributionsUpdate(req,res,next)
 {
    // convert to numbers
    // fix 2, change eval() to validato.toFloat()
-   var preTax = validate.toFloat(req.body.preTax);
-   var afterTax = validate.toFloat(req.body.afterTax);
-   var roth = validate.toFloat(req.body.roth);
+   var preTax = parseFloat(req.body.preTax);
+   var afterTax = parseFloat(req.body.afterTax);
+   var roth = parseFloat(req.body.roth);
 
    var userId = req.session.userId;
 
