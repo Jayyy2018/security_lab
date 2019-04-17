@@ -64,7 +64,8 @@ function callback(next)
 function fixQuery(q)
 {
    if (process.env.DB_CONNECT.substring(0,5) == "mysql") {
-      q = q.replace(/\$\d+/g,"?").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+      q = q.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\$\d+/g,"?");
+
 
     }
 
