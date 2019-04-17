@@ -130,7 +130,7 @@ function setup()
 
    // Template system setup
    swig.setDefaults({
-	 autoescape: false
+	 autoescape: true
     });
 
    // swig.init({
