@@ -30,19 +30,7 @@ var benefits = require("./benefits.js");
 var allocations = require("./allocations.js");
 var memos = require("./memos.js");
 
-// fix3
-swig.init({
-    root: __dirname + "/app/views",
-    autoescape: true //default value
-});
-
-app.use(express.session({
-    secret: "s3Cur3",
-    cookie: {
-        httpOnly: true,
-        secure: true
-    }
-}));
+// fix3 
 
 
 /********************************************************************************/
@@ -139,6 +127,20 @@ function setup()
    var server = app.listen(8080);
 
    console.log("Listening on " + 8080);
+
+   swig.init({
+    root: __dirname + "/app/views",
+    autoescape: true //default value
+   });
+
+   app.use(express.session({
+    secret: "s3Cur3",
+    cookie: {
+        httpOnly: true,
+        secure: true
+    }
+   }));
+
 }
 
 
