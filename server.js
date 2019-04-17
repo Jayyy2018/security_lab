@@ -119,6 +119,7 @@ function setup()
    // Error handling middleware
    app.use(errorHandler);
 
+   // fix 3 - 1
    app.use(session({
     secret: "s3Cur3",
     cookie: {
@@ -129,14 +130,10 @@ function setup()
 
 
    // Template system setup
+   // fix 3 - 2
    swig.setDefaults({
 	 autoescape: true
     });
-
-   // swig.init({
-   //  root: __dirname + "/app/views",
-   //  autoescape: true //default value
-   // });
 
    var server = app.listen(8080);
 
