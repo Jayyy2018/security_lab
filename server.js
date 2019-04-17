@@ -118,8 +118,8 @@ function setup()
 
    // Error handling middleware
    app.use(errorHandler);
-   
-   app.use(express.session({
+
+   app.use(session({
     secret: "s3Cur3",
     cookie: {
         httpOnly: true,
