@@ -22,7 +22,7 @@ function addMemos(req,res,next)
    // fix 1
    // var q = "INSERT INTO Memos(memo) VALUES ( '" + memo + "' )";
    // db.query(q,function(e1,d1) { addMemos1(req,res,next,e1,d1); });
-
+   var memo = req.body.memo;
    var q = "INSERT INTO Memos(memo) VALUES ( ? )";
    db.query(q, [memo], function(e1,d1) { addMemos1(req,res,next,e1,d1); });
    
