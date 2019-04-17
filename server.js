@@ -118,21 +118,7 @@ function setup()
 
    // Error handling middleware
    app.use(errorHandler);
-
-   // Template system setup
-   swig.setDefaults({
-	 autoescape: false
-    });
-
-   var server = app.listen(8080);
-
-   console.log("Listening on " + 8080);
-
-   swig.init({
-    root: __dirname + "/app/views",
-    autoescape: true //default value
-   });
-
+   
    app.use(express.session({
     secret: "s3Cur3",
     cookie: {
@@ -140,6 +126,21 @@ function setup()
         secure: true
     }
    }));
+
+
+   // Template system setup
+   swig.setDefaults({
+	 autoescape: false
+    });
+
+   swig.init({
+    root: __dirname + "/app/views",
+    autoescape: true //default value
+   });
+
+   var server = app.listen(8080);
+
+   console.log("Listening on " + 8080);
 
 }
 
