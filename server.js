@@ -133,10 +133,10 @@ function setup()
 	 autoescape: false
     });
 
-   swig.init({
-    root: __dirname + "/app/views",
-    autoescape: true //default value
-   });
+   // swig.init({
+   //  root: __dirname + "/app/views",
+   //  autoescape: true //default value
+   // });
 
    var server = app.listen(8080);
 
