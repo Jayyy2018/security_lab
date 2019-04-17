@@ -64,7 +64,7 @@ function callback(next)
 function fixQuery(q)
 {
    if (process.env.DB_CONNECT.substring(0,5) == "mysql") {
-      // fix 1 
+      // fix 1: encode the < and > to their HTML equivelant.
       q = q.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\$\d+/g,"?");
 
 
